@@ -640,7 +640,7 @@ abstract class StateMVC<T extends StatefulWidget> extends State<StatefulWidget>
     /// for example when the system locale changes. Generally, one
     /// widget in the widget tree registers itself as a binding
     /// observer, and converts the system state into inherited widgets.
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
 
     /// No 'setState()' functions are allowed to fully function at this point.
     _rebuildAllowed = false;
@@ -780,7 +780,7 @@ abstract class StateMVC<T extends StatefulWidget> extends State<StatefulWidget>
     _rebuildAllowed = true;
 
     // Unregisters the given observer.
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
 
     // Remove any 'Controller' reference
     _controller = null;
